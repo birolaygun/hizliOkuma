@@ -15,12 +15,12 @@ const Lesson1 = ({ lesson, setLesson, info, setInfo }) => {
 
   let paramsSesli = {
     min: 0,
-    max: sesli.length,
+    max: sesli.length - 1,
   };
 
   let paramsSessiz = {
     min: 0,
-    max: sessiz.length,
+    max: sessiz.length - 1,
   };
 
   const give = () => {
@@ -35,9 +35,9 @@ const Lesson1 = ({ lesson, setLesson, info, setInfo }) => {
     setLetter2(sessiz[Number(random(paramsSessiz)).toFixed(0)]);
 
     if (firstLetter1) {
-      setRandomLetter(String(letter1 || "" + letter2 || ""));
+      setRandomLetter(String(letter1 + letter2));
     } else {
-      setRandomLetter(String(letter2 || "" + letter1 || ""));
+      setRandomLetter(String(letter2 + letter1));
     }
     setShow(true);
   };
@@ -65,7 +65,6 @@ const Lesson1 = ({ lesson, setLesson, info, setInfo }) => {
         flexDirection: "column",
       }}
     >
-      {" "}
       <TableHeader info={info} setInfo={setInfo} lesson={lesson} setLesson={setLesson} />
       <Box>
         <Card sx={{ width: 250, m: 3, boxShadow: 6, bgcolor: "rgba(255, 255, 255, 0.7)" }}>
@@ -79,7 +78,7 @@ const Lesson1 = ({ lesson, setLesson, info, setInfo }) => {
             }}
             variant="body1"
           >
-            {randomLetter || ""}
+            {randomLetter.slice(0, 2)}
           </Typography>
         </Card>
       </Box>

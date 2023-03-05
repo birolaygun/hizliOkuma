@@ -8,6 +8,10 @@ import TextField from "@mui/material/TextField";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Switch from "@mui/material/Switch";
 import InputAdornment from "@mui/material/InputAdornment";
+import IconButton from "@mui/material/IconButton";
+import AddIcon from "@mui/icons-material/Add";
+import RemoveIcon from "@mui/icons-material/Remove";
+import Fab from "@mui/material/Fab";
 
 import { ThemeProvider, createTheme, responsiveFontSizes } from "@mui/material/styles";
 
@@ -62,30 +66,55 @@ const TableHeader = ({ lesson, setLesson, info, setInfo }) => {
         Geri
       </Button>
 
-      <ColorModeContext.Provider value={colorMode}>
-        <ThemeProvider theme={theme}>
-          <TextField
-            sx={{ width: 120, m: 2 }}
-            InputProps={{
-              inputProps: {
-                type: "number",
-                min: 0,
-                max: 9999,
-              },
-              endAdornment: <InputAdornment position="end">ms</InputAdornment>,
-            }}
-            type={"number"}
-            id="outlined-basic"
-            label="Gösterim Zamanı"
-            variant="outlined"
-            value={info.speed}
-            onChange={(e) => {
-              setInfo({ ...info, speed: e.target.value });
-            }}
-          />
-        </ThemeProvider>
-      </ColorModeContext.Provider>
+      <Box sx={{ display: "flex", alignItems: "center" }}>
+        <ColorModeContext.Provider value={colorMode}>
+          <ThemeProvider theme={theme}>
+            <TextField
+              sx={{ width: 120, m: 2 }}
+              InputProps={{
+                inputProps: {
+                  type: "number",
+                  min: 0,
+                  max: 9999,
+                },
+                endAdornment: <InputAdornment position="end">ms</InputAdornment>,
+              }}
+              type={"number"}
+              id="outlined-basic"
+              label="Gösterim Zamanı"
+              variant="outlined"
+              value={info.speed}
+              onChange={(e) => {
+                setInfo({ ...info, speed: e.target.value });
+              }}
+            />
+          </ThemeProvider>
+        </ColorModeContext.Provider>
 
+        <Fab
+          sx={{ mr: 1 }}
+          size="small"
+          color="primary"
+          disabled={info.speed > 9888}
+          onClick={() => {
+            setInfo({ ...info, speed: info.speed + 100 });
+          }}
+          aria-label="AddIcon"
+        >
+          <AddIcon />
+        </Fab>
+        <Fab
+          size="small"
+          color="primary"
+          disabled={info.speed < 120}
+          onClick={() => {
+            setInfo({ ...info, speed: info.speed - 100 });
+          }}
+          aria-label="RemoveIcon"
+        >
+          <RemoveIcon />
+        </Fab>
+      </Box>
       <ColorModeContext.Provider value={colorMode}>
         <ThemeProvider theme={theme}>
           <ToggleButtonGroup
