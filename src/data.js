@@ -317,7 +317,6 @@ export const threeLetters = [
   " Gök",
   " Göl",
   " Gön",
-  " Göt",
   " Göz",
   " Gri",
   " Gun",
@@ -667,7 +666,6 @@ export const threeLetters = [
   " Sık",
   " Sır",
   " Sif",
-  " Sik",
   " Sil",
   " Sim",
   " Sin",
@@ -793,12 +791,8 @@ export const threeLetters = [
   " Tüs",
   " Tüş",
   " Tüy",
-  " Uav",
-  " Ubn",
-  " Ubs",
   " Uca",
   " Udi",
-  " Uek",
   " Ulu",
   " Umu",
   " Una",
@@ -821,9 +815,6 @@ export const threeLetters = [
   " Vay",
   " Vaz",
   " Ver",
-  " Vıı",
-  " Vız",
-  " Yaa",
   " Yağ",
   " Yak",
   " Yal",
@@ -990,6 +981,7 @@ export const alphabet = [
   "y",
   "z",
 ];
+
 export const sesli = ["a", "E", "I", "i", "o", "ö", "u", "ü"];
 export const sessiz = [
   "b",
