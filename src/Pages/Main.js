@@ -9,6 +9,7 @@ const Main = ({ lesson, setLesson }) => {
         <Headers lesson={lesson} setLesson={setLesson} header="1" text="1 harf" />
         <Headers lesson={lesson} setLesson={setLesson} header="2" text="2 harf" />
         <Headers lesson={lesson} setLesson={setLesson} header="3" text="3 harf" />
+        <Headers lesson={lesson} setLesson={setLesson} header="4" text="4 harf" />
       </Grid>
     </Box>
   );

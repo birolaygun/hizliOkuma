@@ -24,6 +24,8 @@ const Lesson1 = ({ lesson, setLesson, info, setInfo }) => {
   };
 
   const give = () => {
+    setInfo({ ...info, count: info.count + 1 });
+
     let randoms = Number(random(paramsSesli)).toFixed(0);
     if (randoms > 4) {
       setfirstLetter1(true);

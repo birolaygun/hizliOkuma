@@ -1,4 +1,4 @@
-import { Box, Button, Grid } from "@mui/material";
+import { Box, Button, Grid, Stack, Typography } from "@mui/material";
 import { bgcolor } from "@mui/system";
 import React from "react";
 import ReplyAllIcon from "@mui/icons-material/ReplyAll";
@@ -75,7 +75,7 @@ const TableHeader = ({ lesson, setLesson, info, setInfo }) => {
                 inputProps: {
                   type: "number",
                   min: 0,
-                  max: 9999,
+                  max: 5000,
                 },
                 endAdornment: <InputAdornment position="end">ms</InputAdornment>,
               }}
@@ -155,6 +155,18 @@ const TableHeader = ({ lesson, setLesson, info, setInfo }) => {
           />
         </ThemeProvider>
       </ColorModeContext.Provider>
+
+      <Stack spacing={2} direction="row">
+        <Typography variant="h6"> {info.count} </Typography>
+        <Button
+          variant="contained"
+          onClick={() => {
+            setInfo({ ...info, count: 0 });
+          }}
+        >
+          Sıfırla
+        </Button>{" "}
+      </Stack>
     </Box>
   );
 };

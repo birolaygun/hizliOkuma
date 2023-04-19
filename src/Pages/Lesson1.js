@@ -16,6 +16,7 @@ const Lesson1 = ({ lesson, setLesson, info, setInfo }) => {
   };
 
   const giveRandomLetter = () => {
+    setInfo({ ...info, count: info.count + 1 });
     let letter = alphabet[Number(random(params)).toFixed(0)];
     if (seen.includes(letter)) {
       giveRandomLetter();

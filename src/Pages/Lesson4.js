@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import random from "simple-random-number-generator";
 import Button from "@mui/material/Button";
 import { Box, Card, Typography } from "@mui/material";
-import { threeLetters, alphabet } from "../data";
+import { fourLetters, alphabet } from "../data";
 import TableHeader from "./Components/TableHeader";
 
 const Lesson1 = ({ lesson, setLesson, info, setInfo }) => {
@@ -12,13 +12,13 @@ const Lesson1 = ({ lesson, setLesson, info, setInfo }) => {
 
   let params = {
     min: 0,
-    max: threeLetters.length,
+    max: fourLetters.length,
   };
 
   const giveRandomLetter = () => {
     setInfo({ ...info, count: info.count + 1 });
 
-    let letter = threeLetters[Number(random(params)).toFixed(0)];
+    let letter = fourLetters[Number(random(params)).toFixed(0)];
     if (seen.includes(letter)) {
       giveRandomLetter();
     } else {
