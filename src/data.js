@@ -331,29 +331,39 @@ export const alphabet = [
   "z",
 ];
 
-export const sesli = ["a", "E", "I", "i", "o", "ö", "u", "ü"];
+export const sesli = 
+[
+  "a", 
+  "e", 
+  // "ı", 
+  // "i", 
+  "o", 
+  "ö", 
+  // "u", 
+  // "ü"
+];
 export const sessiz = [
   "b",
   "c",
   "ç",
   "d",
-  "F",
+  // "F",
   "g",
-  "ğ",
-  "h",
-  "j",
-  "k",
-  "l",
-  "m",
-  "n",
-  "p",
-  "r",
-  "s",
-  "ş",
-  "t",
-  "v",
-  "y",
-  "z",
+  // "ğ",
+  // "h",
+  // "j",
+  // "k",
+  // "l",
+  // "m",
+  // "n",
+  // "p",
+  // "r",
+  // "s",
+  // "ş",
+  // "t",
+  // "v",
+  // "y",
+  // "z",
 ];
 
 export const fourLetters = [

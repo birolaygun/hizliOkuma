@@ -18,10 +18,7 @@ const Headers = ({ header, text, lesson, setLesson }) => {
           setLesson(header);
         }}
       >
-        <Typography sx={{ textAlign: "center", pt: 3 }} variant="h2">
-          {header}
-        </Typography>{" "}
-        <Typography sx={{ p: 3, textTransform: "capitalize" }} variant="body2">
+        <Typography sx={{ p: 2, textTransform: "capitalize" }} variant="body2">
           {text}
         </Typography>
       </Card>{" "}
