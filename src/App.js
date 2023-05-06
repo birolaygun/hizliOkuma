@@ -51,7 +51,7 @@ function App() {
         autoPlay
         muted
         loop
-        src="/Images/rainbow.mp4"
+        src="/Images/rb.mp4"
       ></video>
     </Box>
   );
